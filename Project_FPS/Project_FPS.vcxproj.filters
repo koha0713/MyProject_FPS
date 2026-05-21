@@ -28,6 +28,12 @@
     <Filter Include="ソース ファイル\Engine\Graphics\Shader">
       <UniqueIdentifier>{36f48c36-c31c-459c-b981-98656bbd9085}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Engine\Object">
+      <UniqueIdentifier>{e4056652-8ad2-4cb8-8cee-54996696d8f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Engine\Component">
+      <UniqueIdentifier>{37b4cbec-ee02-43a0-8d22-51348acba7eb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="NonCopyable.h">
@@ -69,6 +75,21 @@
     <ClInclude Include="SimpleRenderer.h">
       <Filter>ソース ファイル\Engine\Graphics</Filter>
     </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>ソース ファイル\Engine\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>ソース ファイル\Engine\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="TransformComponent.h">
+      <Filter>ソース ファイル\Engine\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>ソース ファイル\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraComponent.h">
+      <Filter>ソース ファイル\Engine\Component</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Window.cpp">
@@ -100,6 +121,18 @@
     </ClCompile>
     <ClCompile Include="SimpleRenderer.cpp">
       <Filter>ソース ファイル\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>ソース ファイル\Engine\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="TransformComponent.cpp">
+      <Filter>ソース ファイル\Engine\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>ソース ファイル\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraComponent.cpp">
+      <Filter>ソース ファイル\Engine\Component</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
