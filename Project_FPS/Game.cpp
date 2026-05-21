@@ -55,6 +55,16 @@ bool Game::Initialize()
 		return false;
 	}
 
+	//=================
+	// グラフィックスデバイス生成
+	//=================
+	m_graphics = std::make_unique<GraphicsDevice>();
+	
+	if (!m_graphics->Initialize(m_window.get()))
+	{
+		return false;
+	}
+
 	return true;
 
 }
@@ -81,6 +91,7 @@ void Game::Update()
 //==============================
 void Game::Draw()
 {
-
+	m_graphics->Clear();
+	m_graphics->Present();
 }
 

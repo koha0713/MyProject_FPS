@@ -3,6 +3,7 @@
 #include <memory>
 #include "Window.h"
 #include "NonCopyable.h"
+#include "GraphicsDevice.h"
 
 //==============================
 // ゲームクラス
@@ -77,5 +78,6 @@ protected:
 	// メンバ変数
 	//====================
 	std::unique_ptr<Window> m_window;	// ウィンドウ
+	std::unique_ptr<GraphicsDevice> m_graphics;	// グラフィックスデバイス
 
 };
