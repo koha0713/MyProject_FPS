@@ -13,10 +13,39 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="ソース ファイル\Engine">
+      <UniqueIdentifier>{963fd2f9-8409-4e31-90ae-7c56bf19c2b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Engine\Core">
+      <UniqueIdentifier>{02d77318-d30c-43ea-bae1-59504be971b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Application">
+      <UniqueIdentifier>{a721fdfd-3e05-4c9f-af29-e25bf5fdf811}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Engine\Graphics">
+      <UniqueIdentifier>{210c4366-7d6d-485a-8581-669c973f66da}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ソース.cpp">
-      <Filter>ソース ファイル</Filter>
+    <ClInclude Include="NonCopyable.h">
+      <Filter>ソース ファイル\Engine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>ソース ファイル\Engine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>ソース ファイル\Engine\Core</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Window.cpp">
+      <Filter>ソース ファイル\Engine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>ソース ファイル\Engine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>ソース ファイル\Application</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
