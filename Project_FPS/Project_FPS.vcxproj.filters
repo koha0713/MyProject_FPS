@@ -25,6 +25,9 @@
     <Filter Include="ソース ファイル\Engine\Graphics">
       <UniqueIdentifier>{210c4366-7d6d-485a-8581-669c973f66da}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Engine\Graphics\Shader">
+      <UniqueIdentifier>{36f48c36-c31c-459c-b981-98656bbd9085}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="NonCopyable.h">
@@ -44,6 +47,9 @@
     </ClInclude>
     <ClInclude Include="RenderTarget.h">
       <Filter>ソース ファイル\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>ソース ファイル\Engine\Graphics\Shader</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -65,5 +71,16 @@
     <ClCompile Include="RenderTarget.cpp">
       <Filter>ソース ファイル\Engine\Graphics</Filter>
     </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>ソース ファイル\Engine\Graphics\Shader</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="VS_Basic.hlsl">
+      <Filter>リソース ファイル</Filter>
+    </FxCompile>
+    <FxCompile Include="PS_Basic.hlsl">
+      <Filter>リソース ファイル</Filter>
+    </FxCompile>
   </ItemGroup>
 </Project>

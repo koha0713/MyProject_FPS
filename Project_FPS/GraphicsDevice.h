@@ -3,6 +3,7 @@
 #include <d3d11.h>
 #include <wrl/client.h>
 #include "NonCopyable.h"
+#include "DepthStencil.h"
 
 //==============================
 // 前方宣言
@@ -67,6 +68,13 @@ private:
 	Microsoft::WRL::ComPtr<ID3D11Device> m_device; // デバイス
 	Microsoft::WRL::ComPtr<ID3D11DeviceContext> m_context; // デバイスコンテキスト
 	Microsoft::WRL::ComPtr<IDXGISwapChain> m_swapChain; // スワップチェーン
+	
+	//====================
+	// ビューポート
+	//====================
+	D3D11_VIEWPORT m_viewport{};
+
+	std::unique_ptr<DepthStencil> m_depthStencil; // デプスステンシル
 
 	Microsoft::WRL::ComPtr<ID3D11RenderTargetView> m_rtv; // レンダーターゲットビュー
 };

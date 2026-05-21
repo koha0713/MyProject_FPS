@@ -1,5 +1,6 @@
 #include "GraphicsDevice.h"
 #include "Window.h"
+#include <memory>
 
 #pragma comment(lib,"d3d11.lib")
 #pragma comment(lib,"dxgi.lib")
@@ -69,6 +70,34 @@ bool GraphicsDevice::Initialize(Window* window)
 		return false;
 	}
 
+	//====================
+	// DepthStencil生成
+	//====================
+	m_depthStencil = std::make_unique<DepthStencil>();
+	if (!m_depthStencil->Initialize(
+		m_device.Get(), 
+		window))
+	{
+		return false;
+	}
+
+	//====================
+	// Viewportの設定
+	//====================
+	m_viewport.Width =
+		static_cast<float>(window->GetWidth()); // 幅
+	m_viewport.Height =
+		static_cast<float>(window->GetHeight()); // 高さ
+
+	m_viewport.TopLeftX = 0.0f; // ビューポートの左上X座標
+	m_viewport.TopLeftY = 0.0f; // ビューポートの左上Y座標
+	m_viewport.MinDepth = 0.0f; // 最小深度
+	m_viewport.MaxDepth = 1.0f; // 最大深度
+
+	m_context->RSSetViewports(
+		1,
+		&m_viewport);
+
 	return true;
 
 }
@@ -128,7 +157,7 @@ void GraphicsDevice::Clear()
 	m_context->OMSetRenderTargets(
 		1,
 		m_rtv.GetAddressOf(), 
-		nullptr);
+		m_depthStencil->GetDSV());
 
 	//====================
 	// 画面クリア
@@ -136,6 +165,15 @@ void GraphicsDevice::Clear()
 	m_context->ClearRenderTargetView(
 		m_rtv.Get(), 
 		clearColor);
+
+	//====================
+	// 深度ステンシルのクリア
+	//====================
+	m_context->ClearDepthStencilView(
+		m_depthStencil->GetDSV(), 
+		D3D11_CLEAR_DEPTH, 
+		1.0f, 
+		0);
 }
 
 //====================
