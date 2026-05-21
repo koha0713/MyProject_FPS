@@ -51,6 +51,24 @@
     <ClInclude Include="Shader.h">
       <Filter>ソース ファイル\Engine\Graphics\Shader</Filter>
     </ClInclude>
+    <ClInclude Include="Vertex.h">
+      <Filter>ソース ファイル\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexBuffer.h">
+      <Filter>ソース ファイル\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="InputLayout.h">
+      <Filter>ソース ファイル\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexShader.h">
+      <Filter>ソース ファイル\Engine\Graphics\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="PixelShader.h">
+      <Filter>ソース ファイル\Engine\Graphics\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleRenderer.h">
+      <Filter>ソース ファイル\Engine\Graphics</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Window.cpp">
@@ -73,6 +91,15 @@
     </ClCompile>
     <ClCompile Include="Shader.cpp">
       <Filter>ソース ファイル\Engine\Graphics\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="VertexBuffer.cpp">
+      <Filter>ソース ファイル\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="InputLayout.cpp">
+      <Filter>ソース ファイル\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleRenderer.cpp">
+      <Filter>ソース ファイル\Engine\Graphics</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

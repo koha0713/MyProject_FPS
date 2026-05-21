@@ -2,6 +2,7 @@
 
 #include <d3d11.h>
 #include <wrl/client.h>
+#include <memory>
 #include "NonCopyable.h"
 #include "DepthStencil.h"
 
@@ -54,6 +55,19 @@ class GraphicsDevice : public NonCopyable
 	 * @brief ï`âÊ
 	 */
 	void Present();
+
+	//====================
+	// éÊìæä÷êî
+	//====================
+	ID3D11Device* GetDevice() const
+	{
+		return m_device.Get();
+	}
+
+	ID3D11DeviceContext* GetContext() const
+	{
+		return m_context.Get();
+	}
 
 private:
 	//====================

@@ -65,6 +65,15 @@ bool Game::Initialize()
 		return false;
 	}
 
+	//=================
+	// レンダラー初期化
+	//=================
+	if (!m_renderer.Initialize(
+		m_graphics->GetDevice()))
+	{
+		return false;
+	}
+
 	return true;
 
 }
@@ -92,6 +101,13 @@ void Game::Update()
 void Game::Draw()
 {
 	m_graphics->Clear();
+
+	//=======================
+	// レンダラー描画
+	//=======================
+	m_renderer.Draw(
+		m_graphics->GetContext());
+
 	m_graphics->Present();
 }
 

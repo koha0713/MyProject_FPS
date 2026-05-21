@@ -5,6 +5,8 @@
 #include "NonCopyable.h"
 #include "GraphicsDevice.h"
 
+#include "SimpleRenderer.h"
+
 //==============================
 // ゲームクラス
 //==============================
@@ -79,5 +81,7 @@ protected:
 	//====================
 	std::unique_ptr<Window> m_window;	// ウィンドウ
 	std::unique_ptr<GraphicsDevice> m_graphics;	// グラフィックスデバイス
+
+	SimpleRenderer m_renderer;
 
 };
