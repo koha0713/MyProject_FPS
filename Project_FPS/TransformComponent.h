@@ -30,12 +30,24 @@ public:
 	// 位置、回転、スケールの設定と取得
 	//====================
 	void SetPosition(const DirectX::XMFLOAT3& position);
+	void SetPosition(
+		float x,
+		float y,
+		float z);
 	DirectX::XMFLOAT3 GetPosition() const { return m_position; }
 
 	void SetRotation(const DirectX::XMFLOAT3& rotation);
+	void SetRotation(
+		float x,
+		float y,
+		float z);
 	DirectX::XMFLOAT3 GetRotation() const { return m_rotation; }
 
 	void SetScale(const DirectX::XMFLOAT3& scale);
+	void SetScale(
+		float x,
+		float y,
+		float z);
 	DirectX::XMFLOAT3 GetScale() const { return m_scale; }
 
 	//====================

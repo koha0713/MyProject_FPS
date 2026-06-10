@@ -32,7 +32,10 @@ public:
 	 * @brief ‰Šú‰»
 	 * @return ¬Œ÷‚µ‚½‚çtrueA¸”s‚µ‚½‚çfalse
 	 */
-	virtual bool Initialize() {}
+	virtual bool Initialize() 
+	{
+		return true;
+	}
 
 	//====================
 	// XV

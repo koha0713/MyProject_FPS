@@ -2,8 +2,12 @@
 
 #include "VertexBuffer.h"
 #include "InputLayout.h"
+
 #include "VertexShader.h"
 #include "PixelShader.h"
+
+#include "TransformData.h"
+#include "ConstantBuffer.h"
 
 //==============================
 // シンプルレンダラー
@@ -21,7 +25,10 @@ public:
 	// 描画関数
 	//====================
 	void Draw(
-		ID3D11DeviceContext* context);
+		ID3D11DeviceContext* context,
+		const DirectX::XMMATRIX& world,
+		const DirectX::XMMATRIX& view,
+		const DirectX::XMMATRIX& projection);
 
 private:
 	//====================
@@ -32,5 +39,7 @@ private:
 
 	VertexShader m_vs; // 頂点シェーダー
 	PixelShader m_ps; // ピクセルシェーダー
+
+	ConstantBuffer<TransformData> m_cb;
 
 };

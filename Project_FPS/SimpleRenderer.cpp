@@ -53,6 +53,14 @@ bool SimpleRenderer::Initialize(
 		return false;
 	}
 
+	//====================
+	// ConstantBuffer生成
+	//====================
+	if (!m_cb.Create(device))
+	{
+		return false;
+	}
+
 	return true;
 
 }
@@ -61,8 +69,43 @@ bool SimpleRenderer::Initialize(
 // 描画関数
 //==============================
 void SimpleRenderer::Draw(
-	ID3D11DeviceContext* context)
+	ID3D11DeviceContext* context,
+	const DirectX::XMMATRIX& world,
+	const DirectX::XMMATRIX& view,
+	const DirectX::XMMATRIX& projection)
 {
+	//====================
+	// TransformData
+	//====================
+	TransformData data{};
+
+	data.world =
+		DirectX::XMMatrixTranspose(world);
+
+	data.view =
+		DirectX::XMMatrixTranspose(view);
+
+	data.projection =
+		DirectX::XMMatrixTranspose(projection);
+
+	//====================
+	// CB更新
+	//====================
+	m_cb.Update(
+		context,
+		data);
+
+	//====================
+	// VSへ送信
+	//====================
+	ID3D11Buffer* cb =
+		m_cb.Get();
+
+	context->VSSetConstantBuffers(
+		0,
+		1,
+		&cb);
+
 	//====================
 	// 頂点バッファの設定
 	//====================

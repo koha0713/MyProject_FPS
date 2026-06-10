@@ -18,6 +18,20 @@ void TransformComponent::SetPosition(const XMFLOAT3& position)
 	m_position = position;
 	UpdateMatrix();
 }
+void TransformComponent::SetPosition(
+	float x,
+	float y,
+	float z)
+{
+	m_position =
+	{
+		x,
+		y,
+		z
+	};
+
+	UpdateMatrix();
+}
 
 //==============================
 // âÒì]ÇÃê›íË
@@ -27,6 +41,20 @@ void TransformComponent::SetRotation(const XMFLOAT3& rotation)
 	m_rotation = rotation;
 	UpdateMatrix();
 }
+void TransformComponent::SetRotation(
+	float x,
+	float y,
+	float z)
+{
+	m_rotation =
+	{
+		x,
+		y,
+		z
+	};
+
+	UpdateMatrix();
+}
 
 //==============================
 // ÉXÉPÅ[ÉãÇÃê›íË
@@ -34,6 +62,20 @@ void TransformComponent::SetRotation(const XMFLOAT3& rotation)
 void TransformComponent::SetScale(const XMFLOAT3& scale)
 {
 	m_scale = scale;
+	UpdateMatrix();
+}
+void TransformComponent::SetScale(
+	float x,
+	float y,
+	float z)
+{
+	m_scale =
+	{
+		x,
+		y,
+		z
+	};
+
 	UpdateMatrix();
 }
 

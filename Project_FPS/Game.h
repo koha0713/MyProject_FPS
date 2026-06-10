@@ -4,9 +4,13 @@
 #include "Window.h"
 #include "NonCopyable.h"
 #include "GraphicsDevice.h"
+#include <vector>
 
-#include "SimpleRenderer.h"
+#include "GameObject.h"
 
+#include "TransformComponent.h"
+#include "CameraComponent.h"
+#include "MeshRendererComponent.h"
 //==============================
 // ゲームクラス
 //==============================
@@ -82,6 +86,9 @@ protected:
 	std::unique_ptr<Window> m_window;	// ウィンドウ
 	std::unique_ptr<GraphicsDevice> m_graphics;	// グラフィックスデバイス
 
-	SimpleRenderer m_renderer;
+	// 仮ゲームオブジェクト
+	std::vector<
+		std::shared_ptr<GameObject>>
+		m_gameObjects;
 
 };

@@ -90,6 +90,15 @@
     <ClInclude Include="CameraComponent.h">
       <Filter>ソース ファイル\Engine\Component</Filter>
     </ClInclude>
+    <ClInclude Include="MeshRendererComponent.h">
+      <Filter>ソース ファイル\Engine\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="TransformData.h">
+      <Filter>ソース ファイル\Engine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstantBuffer.h">
+      <Filter>ソース ファイル\Engine\Graphics</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Window.cpp">
@@ -132,6 +141,9 @@
       <Filter>ソース ファイル\Engine\Graphics</Filter>
     </ClCompile>
     <ClCompile Include="CameraComponent.cpp">
+      <Filter>ソース ファイル\Engine\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshRendererComponent.cpp">
       <Filter>ソース ファイル\Engine\Component</Filter>
     </ClCompile>
   </ItemGroup>

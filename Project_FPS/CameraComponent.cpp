@@ -3,6 +3,17 @@
 #include "GameObject.h"
 
 //==============================
+// コンストラクタ・デストラクタ
+//==============================
+CameraComponent::CameraComponent()
+{
+}
+
+CameraComponent::~CameraComponent()
+{
+}
+
+//==============================
 // 更新
 //==============================
 void CameraComponent::Update()

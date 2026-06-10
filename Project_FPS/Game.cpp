@@ -66,13 +66,53 @@ bool Game::Initialize()
 	}
 
 	//=================
-	// レンダラー初期化
+	// カメラObj
 	//=================
-	if (!m_renderer.Initialize(
-		m_graphics->GetDevice()))
-	{
-		return false;
-	}
+	auto cameraObject =
+		std::make_shared<GameObject>();
+
+	// Transform
+	auto cameraTransform =
+		cameraObject->AddComponent<
+		TransformComponent>();
+
+	cameraTransform->SetPosition(
+		0.0f,
+		0.0f,
+		-5.0f);
+
+	// Camera
+	auto camera =
+		cameraObject->AddComponent<
+		CameraComponent>();
+
+	// 保持
+	m_gameObjects.emplace_back(
+		cameraObject);
+
+	//=================
+	// 三角Obj
+	//=================
+	auto triangleObject =
+		std::make_shared<GameObject>();
+
+	// Transform
+	triangleObject->AddComponent<
+		TransformComponent>();
+
+	// Renderer
+	auto renderer =
+		triangleObject->AddComponent<
+		MeshRendererComponent>(
+			m_graphics->GetDevice(),
+			m_graphics->GetContext());
+
+	// Camera設定
+	renderer->SetCamera(camera);
+
+	// 保持
+	m_gameObjects.emplace_back(
+		triangleObject);
 
 	return true;
 
@@ -92,7 +132,11 @@ void Game::Finalize()
 //==============================
 void Game::Update()
 {
-
+	// ゲームオブジェクト更新
+	for (auto& object : m_gameObjects)
+	{
+		object->Update();
+	}
 }
 
 //==============================
@@ -103,10 +147,12 @@ void Game::Draw()
 	m_graphics->Clear();
 
 	//=======================
-	// レンダラー描画
+	// ゲームオブジェクト描画
 	//=======================
-	m_renderer.Draw(
-		m_graphics->GetContext());
+	for (auto& object : m_gameObjects)
+	{
+		object->Draw();
+	}
 
 	m_graphics->Present();
 }
