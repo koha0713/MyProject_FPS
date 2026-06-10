@@ -144,10 +144,12 @@
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="GraphicsDevice.h" />
     <ClInclude Include="InputLayout.h" />
+    <ClInclude Include="IScene.h" />
     <ClInclude Include="MeshRendererComponent.h" />
     <ClInclude Include="NonCopyable.h" />
     <ClInclude Include="PixelShader.h" />
     <ClInclude Include="RenderTarget.h" />
+    <ClInclude Include="SceneManager.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="SimpleRenderer.h" />
     <ClInclude Include="TransformComponent.h" />
@@ -168,6 +170,7 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MeshRendererComponent.cpp" />
     <ClCompile Include="RenderTarget.cpp" />
+    <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="SimpleRenderer.cpp" />
     <ClCompile Include="TransformComponent.cpp" />

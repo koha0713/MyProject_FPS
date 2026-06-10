@@ -34,6 +34,12 @@
     <Filter Include="ソース ファイル\Engine\Component">
       <UniqueIdentifier>{37b4cbec-ee02-43a0-8d22-51348acba7eb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Engine\Scene">
+      <UniqueIdentifier>{1576a0b4-a78e-4e5e-bf72-101511a845d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Engine\Scene\SceneCore">
+      <UniqueIdentifier>{8285d1a3-4fa1-4176-a61f-5724bde538f4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="NonCopyable.h">
@@ -99,6 +105,12 @@
     <ClInclude Include="ConstantBuffer.h">
       <Filter>ソース ファイル\Engine\Graphics</Filter>
     </ClInclude>
+    <ClInclude Include="IScene.h">
+      <Filter>ソース ファイル\Engine\Scene\SceneCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>ソース ファイル\Engine\Scene\SceneCore</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Window.cpp">
@@ -145,6 +157,9 @@
     </ClCompile>
     <ClCompile Include="MeshRendererComponent.cpp">
       <Filter>ソース ファイル\Engine\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>ソース ファイル\Engine\Scene\SceneCore</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
