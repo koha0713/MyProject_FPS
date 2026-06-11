@@ -40,6 +40,9 @@
     <Filter Include="ソース ファイル\Engine\Scene\SceneCore">
       <UniqueIdentifier>{8285d1a3-4fa1-4176-a61f-5724bde538f4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Engine\Scene\SceneCore\Factory">
+      <UniqueIdentifier>{bd9e86b0-376e-46af-a3d8-5521160962df}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="NonCopyable.h">
@@ -111,6 +114,24 @@
     <ClInclude Include="SceneManager.h">
       <Filter>ソース ファイル\Engine\Scene\SceneCore</Filter>
     </ClInclude>
+    <ClInclude Include="Scene_Test.h">
+      <Filter>ソース ファイル\Engine\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneRoot.h">
+      <Filter>ソース ファイル\Engine\Scene\SceneCore</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseScene.h">
+      <Filter>ソース ファイル\Engine\Scene\SceneCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneSave.h">
+      <Filter>ソース ファイル\Engine\Scene\SceneCore</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentFactory.h">
+      <Filter>ソース ファイル\Engine\Scene\SceneCore\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjectFactory.h">
+      <Filter>ソース ファイル\Engine\Scene\SceneCore\Factory</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Window.cpp">
@@ -160,6 +181,18 @@
     </ClCompile>
     <ClCompile Include="SceneManager.cpp">
       <Filter>ソース ファイル\Engine\Scene\SceneCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene_Test.cpp">
+      <Filter>ソース ファイル\Engine\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseScene.cpp">
+      <Filter>ソース ファイル\Engine\Scene\SceneCore</Filter>
+    </ClCompile>
+    <ClCompile Include="ComponentFactory.cpp">
+      <Filter>ソース ファイル\Engine\Scene\SceneCore\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjectFactory.cpp">
+      <Filter>ソース ファイル\Engine\Scene\SceneCore\Factory</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

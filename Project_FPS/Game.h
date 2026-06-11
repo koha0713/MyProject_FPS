@@ -6,6 +6,8 @@
 #include "GraphicsDevice.h"
 #include <vector>
 
+#include "SceneManager.h"
+
 #include "GameObject.h"
 
 #include "TransformComponent.h"
@@ -86,9 +88,6 @@ protected:
 	std::unique_ptr<Window> m_window;	// ウィンドウ
 	std::unique_ptr<GraphicsDevice> m_graphics;	// グラフィックスデバイス
 
-	// 仮ゲームオブジェクト
-	std::vector<
-		std::shared_ptr<GameObject>>
-		m_gameObjects;
+	SceneManager m_sceneManager;
 
 };

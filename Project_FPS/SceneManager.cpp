@@ -26,7 +26,20 @@ void SceneManager::Draw()
 //==============================
 // シーンの切り替え
 //==============================
-void SceneManager::ChangeScene(std::shared_ptr<IScene> scene)
+bool SceneManager::ChangeScene(std::shared_ptr<IScene> scene)
 {
+	if (m_scene)
+	{
+		m_scene->Finalize();
+	}
+
 	m_scene = scene;
+
+	if (!m_scene)
+	{
+		return false;
+	}
+
+	// 新シーン初期化
+	return m_scene->Initialize();
 }

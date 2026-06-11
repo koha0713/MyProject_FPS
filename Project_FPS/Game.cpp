@@ -1,4 +1,5 @@
 #include "Game.h"
+#include "Scene_Test.h"
 
 //==============================
 // ゲーム実行
@@ -65,54 +66,14 @@ bool Game::Initialize()
 		return false;
 	}
 
-	//=================
-	// カメラObj
-	//=================
-	auto cameraObject =
-		std::make_shared<GameObject>();
+	auto scene =
+		std::make_shared<Scene_Test>(
+			m_graphics.get());
 
-	// Transform
-	auto cameraTransform =
-		cameraObject->AddComponent<
-		TransformComponent>();
-
-	cameraTransform->SetPosition(
-		0.0f,
-		0.0f,
-		-5.0f);
-
-	// Camera
-	auto camera =
-		cameraObject->AddComponent<
-		CameraComponent>();
-
-	// 保持
-	m_gameObjects.emplace_back(
-		cameraObject);
-
-	//=================
-	// 三角Obj
-	//=================
-	auto triangleObject =
-		std::make_shared<GameObject>();
-
-	// Transform
-	triangleObject->AddComponent<
-		TransformComponent>();
-
-	// Renderer
-	auto renderer =
-		triangleObject->AddComponent<
-		MeshRendererComponent>(
-			m_graphics->GetDevice(),
-			m_graphics->GetContext());
-
-	// Camera設定
-	renderer->SetCamera(camera);
-
-	// 保持
-	m_gameObjects.emplace_back(
-		triangleObject);
+	if (!m_sceneManager.ChangeScene(scene))
+	{
+		return false;
+	}
 
 	return true;
 
@@ -132,11 +93,7 @@ void Game::Finalize()
 //==============================
 void Game::Update()
 {
-	// ゲームオブジェクト更新
-	for (auto& object : m_gameObjects)
-	{
-		object->Update();
-	}
+	m_sceneManager.Update();
 }
 
 //==============================
@@ -146,13 +103,7 @@ void Game::Draw()
 {
 	m_graphics->Clear();
 
-	//=======================
-	// ゲームオブジェクト描画
-	//=======================
-	for (auto& object : m_gameObjects)
-	{
-		object->Draw();
-	}
+	m_sceneManager.Draw();
 
 	m_graphics->Present();
 }

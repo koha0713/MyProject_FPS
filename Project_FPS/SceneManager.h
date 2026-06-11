@@ -31,7 +31,7 @@ public:
 	 * @details 新しいシーンを設定する関数
 	 * @param scene 新しいシーン
 	 */
-	void ChangeScene(std::shared_ptr<IScene> scene);
+	bool ChangeScene(std::shared_ptr<IScene> scene);
 
 private:
 	//====================

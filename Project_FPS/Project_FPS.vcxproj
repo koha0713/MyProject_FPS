@@ -135,13 +135,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BaseScene.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="CameraComponent.h" />
     <ClInclude Include="Component.h" />
+    <ClInclude Include="ComponentFactory.h" />
     <ClInclude Include="ConstantBuffer.h" />
     <ClInclude Include="DepthStencil.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameObject.h" />
+    <ClInclude Include="GameObjectFactory.h" />
     <ClInclude Include="GraphicsDevice.h" />
     <ClInclude Include="InputLayout.h" />
     <ClInclude Include="IScene.h" />
@@ -150,6 +153,9 @@
     <ClInclude Include="PixelShader.h" />
     <ClInclude Include="RenderTarget.h" />
     <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="SceneRoot.h" />
+    <ClInclude Include="SceneSave.h" />
+    <ClInclude Include="Scene_Test.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="SimpleRenderer.h" />
     <ClInclude Include="TransformComponent.h" />
@@ -160,17 +166,21 @@
     <ClInclude Include="Window.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BaseScene.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="CameraComponent.cpp" />
+    <ClCompile Include="ComponentFactory.cpp" />
     <ClCompile Include="DepthStencil.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="GameObjectFactory.cpp" />
     <ClCompile Include="GraphicsDevice.cpp" />
     <ClCompile Include="InputLayout.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MeshRendererComponent.cpp" />
     <ClCompile Include="RenderTarget.cpp" />
     <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="Scene_Test.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="SimpleRenderer.cpp" />
     <ClCompile Include="TransformComponent.cpp" />
